@@ -1,7 +1,12 @@
 <script setup lang="ts">
-defineProps<{ msg: string }>()
+defineProps<{ msg: string }>();
+const emit = defineEmits<{ change: [id: number, name: string] }>();
+const count = ref(0);
 
-const count = ref(0)
+const change = () => {
+  emit("change", 3, "supJoan")
+}
+
 </script>
 
 <template>
@@ -13,6 +18,7 @@ const count = ref(0)
       Edit
       <code>components/HelloWorld.vue</code> to test HMR
     </p>
+    <a-button @click="change">change</a-button>
   </div>
 
   <p>

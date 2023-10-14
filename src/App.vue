@@ -1,9 +1,17 @@
 <script setup lang="ts">
 import HelloWorld from '@/components/HelloWorld.vue'
+const myId = ref(1)
+const myName = ref("joan")
+
+const change = (id: number , name: string) => {
+  myId.value = id
+  myName.value = name
+}
 </script>
 
 <template>
   <div>
+    {{ myId + ":" + myName }}
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
@@ -11,7 +19,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <HelloWorld msg="Vite + Vue" @change="change"/>
 </template>
 
 <style scoped>
