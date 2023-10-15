@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import Preview from './Preview.vue';
 defineProps<{ msg: string }>();
 const emit = defineEmits<{ change: [id: number, name: string] }>();
 const count = ref(0);
-
+console.log(import.meta.env.VITE_MT)
 const change = () => {
   emit("change", 3, "supJoan")
 }
@@ -33,6 +34,9 @@ const change = () => {
     in your IDE for a better DX
   </p>
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+  <Suspense>
+    <Preview />
+  </Suspense>
 </template>
 
 <style lang="scss" scoped>

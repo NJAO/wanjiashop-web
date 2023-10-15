@@ -1,38 +1,38 @@
-<script setup lang="ts">
-import HelloWorld from '@/components/HelloWorld.vue'
-const myId = ref(1)
-const myName = ref("joan")
-
-const change = (id: number , name: string) => {
-  myId.value = id
-  myName.value = name
-}
-</script>
-
 <template>
-  <div>
-    {{ myId + ":" + myName }}
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" @change="change"/>
+  <a-layout class="container">
+    <a-layout-header :style="{ position: 'fixed', zIndex: 1, width: '100%' }">
+      <div class="logo" />
+      <a-menu
+        v-model:selectedKeys="selectedKeys"
+        mode="horizontal"
+        theme="dark"
+        :style="{ lineHeight: '64px' }"
+      >
+        <a-menu-item key="1"><router-link to="/">首页</router-link></a-menu-item>
+        <a-menu-item key="2"><router-link to="/category">分类</router-link></a-menu-item>
+      </a-menu>
+    </a-layout-header>
+    <a-layout-content :style="{ padding: '0 50px', marginTop: '64px' }" class="content">
+     <Suspense>
+      <router-view />
+     </Suspense>
+    </a-layout-content>
+    <a-layout-footer :style="{ textAlign: 'center' }">
+      ©2023 Created by WanjiaShop
+    </a-layout-footer>
+  </a-layout>
 </template>
+<script lang="ts" setup>
+import { ref } from 'vue';
+const selectedKeys = ref<string[]>(['1']);
+</script>
+<style scoped lang="scss">
+.container {
+  min-height: 100vh;
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
+
+
 </style>

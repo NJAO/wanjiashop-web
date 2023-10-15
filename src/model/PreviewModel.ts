@@ -1,0 +1,3 @@
+interface IndexUrlModel {}
+
+export type {}
