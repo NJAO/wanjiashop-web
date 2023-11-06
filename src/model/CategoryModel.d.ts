@@ -15,3 +15,20 @@ export interface CategoryList {
   is_category: number
   is_channel: number
 }
+
+export interface CurrentCategoryGoodsInfo {
+  count: number
+  totalPages: number
+  pageSize: number
+  currentPage: number
+  data: GoodInfo[]
+}
+
+interface GoodInfo {
+  name: string
+  id: number
+  goods_brief: string
+  min_retail_price: number
+  list_pic_url: string
+  goods_number: number
+}

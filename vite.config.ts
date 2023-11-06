@@ -8,7 +8,6 @@ import AutoImport from "unplugin-auto-import/vite"
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), "")
-  console.log(env.VITE_MT)
   return {
     plugins: [
       vue(),

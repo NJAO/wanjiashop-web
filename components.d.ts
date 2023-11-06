@@ -9,12 +9,20 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    ACard: typeof import('ant-design-vue/es')['Card']
+    ACardMeta: typeof import('ant-design-vue/es')['CardMeta']
+    AConfigProvider: typeof import('ant-design-vue/es')['ConfigProvider']
+    AImage: typeof import('ant-design-vue/es')['Image']
+    AInputSearch: typeof import('ant-design-vue/es')['InputSearch']
     ALayout: typeof import('ant-design-vue/es')['Layout']
     ALayoutContent: typeof import('ant-design-vue/es')['LayoutContent']
     ALayoutFooter: typeof import('ant-design-vue/es')['LayoutFooter']
     ALayoutHeader: typeof import('ant-design-vue/es')['LayoutHeader']
+    AList: typeof import('ant-design-vue/es')['List']
+    AListItem: typeof import('ant-design-vue/es')['ListItem']
     AMenu: typeof import('ant-design-vue/es')['Menu']
     AMenuItem: typeof import('ant-design-vue/es')['MenuItem']
+    ASkeleton: typeof import('ant-design-vue/es')['Skeleton']
     Category: typeof import('./src/components/Category.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     Preview: typeof import('./src/components/Preview.vue')['default']

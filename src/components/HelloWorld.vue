@@ -3,7 +3,6 @@ import Preview from './Preview.vue';
 defineProps<{ msg: string }>();
 const emit = defineEmits<{ change: [id: number, name: string] }>();
 const count = ref(0);
-console.log(import.meta.env.VITE_MT)
 const change = () => {
   emit("change", 3, "supJoan")
 }

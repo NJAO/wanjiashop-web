@@ -18,4 +18,14 @@ const get = <T = any, R = ResponseStruct<T>>(
   })
 }
 
-export { get }
+const post = <T = any, R = ResponseStruct<T>>(
+  url: keyof typeof api,
+  data: object = {}
+): Promise<R> => {
+  return service.request<T, R>({
+    method: "post",
+    url: api[url],
+    data,
+  })
+}
+export { get, post }

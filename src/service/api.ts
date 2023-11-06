@@ -6,7 +6,7 @@ export const api = {
   // 分类
   CatalogList: "catalog/index", //分类目录全部分类数据接口
   CatalogCurrent: "catalog/current", //分类目录当前分类数据接口
-  GetCurrentList: "catalog/currentlist",
+  GetCurrentList: "catalog/currentlist", // 当前分类商品数据
   // 购物车
   CartAdd: "cart/add", // 添加商品到购物车
   CartList: "cart/index", //获取购物车的数据

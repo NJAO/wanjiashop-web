@@ -12,11 +12,17 @@ const routes: [RouteRecordRaw] = [
     path: "/",
     name: "Index",
     component: AppVue,
+    meta: {
+      key: 1,
+    },
     children: [
       {
         path: "/category",
         name: "Category",
         component: () => import("@/components/Category.vue"),
+        meta: {
+          key: 2,
+        },
       },
     ],
   },
