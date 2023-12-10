@@ -24,6 +24,14 @@ const routes: [RouteRecordRaw] = [
           key: 2,
         },
       },
+      {
+        path: "/search",
+        name: "Search",
+        component: () => import("@/components/Search.vue"),
+        meta: {
+          key: 3,
+        },
+      },
     ],
   },
 ]

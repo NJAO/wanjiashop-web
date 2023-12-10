@@ -1,7 +1,7 @@
 import { service } from "./service"
 import { api } from "./api"
 
-interface ResponseStruct<T = any> {
+export interface ResponseStruct<T = any> {
   data: T
   errmsg: string
   errno: number

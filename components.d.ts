@@ -13,6 +13,7 @@ declare module '@vue/runtime-core' {
     ACardMeta: typeof import('ant-design-vue/es')['CardMeta']
     AConfigProvider: typeof import('ant-design-vue/es')['ConfigProvider']
     AImage: typeof import('ant-design-vue/es')['Image']
+    AInput: typeof import('ant-design-vue/es')['Input']
     AInputSearch: typeof import('ant-design-vue/es')['InputSearch']
     ALayout: typeof import('ant-design-vue/es')['Layout']
     ALayoutContent: typeof import('ant-design-vue/es')['LayoutContent']
@@ -28,5 +29,7 @@ declare module '@vue/runtime-core' {
     Preview: typeof import('./src/components/Preview.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Search: typeof import('./src/components/Search.vue')['default']
+    Serach: typeof import('./src/components/Serach.vue')['default']
   }
 }

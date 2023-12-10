@@ -11,9 +11,7 @@
         >
           <a-menu-item key="1"><router-link to="/">首页</router-link></a-menu-item>
           <a-menu-item key="2"><router-link to="/category">全部商品</router-link></a-menu-item>
-          <a-menu-item >
-            <a-input-search v-model:value="search" placeholder="请输入搜索关键词" loading />
-          </a-menu-item>
+          <a-menu-item key="3"><router-link to="/search">搜索</router-link></a-menu-item>
         </a-menu>
       </a-layout-header>
       <a-layout-content :style="{ marginTop: '64px' }" class="content">
@@ -32,7 +30,6 @@ import { ref } from 'vue';
 
 import zhCN from 'ant-design-vue/es/locale/zh_CN';
 const router = useRouter()
-const search = ref<string>("")
 const selectedKeys = ref<string[]>([String(router.currentRoute.value.meta.key) as string]);
 
 
@@ -40,7 +37,9 @@ const selectedKeys = ref<string[]>([String(router.currentRoute.value.meta.key) a
 <style scoped lang="scss">
 .container {
   min-height: 100vh;
-  
+  .content {
+    // min-height: calc(100vh - 69px);
+  }
 
 }
 
