@@ -1,4 +1,5 @@
 import AppVue from "@/App.vue"
+import CategoryVue from "@/components/Category.vue"
 
 import {
   RouteLocationNormalized,
@@ -17,11 +18,11 @@ const routes: [RouteRecordRaw] = [
     },
     children: [
       {
-        path: "/category",
+        path: "/",
         name: "Category",
-        component: () => import("@/components/Category.vue"),
+        component: CategoryVue,
         meta: {
-          key: 2,
+          key: 1,
         },
       },
       {
@@ -29,7 +30,7 @@ const routes: [RouteRecordRaw] = [
         name: "Search",
         component: () => import("@/components/Search.vue"),
         meta: {
-          key: 3,
+          key: 2,
         },
       },
     ],

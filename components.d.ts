@@ -9,11 +9,11 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AButton: typeof import('ant-design-vue/es')['Button']
     ACard: typeof import('ant-design-vue/es')['Card']
     ACardMeta: typeof import('ant-design-vue/es')['CardMeta']
     AConfigProvider: typeof import('ant-design-vue/es')['ConfigProvider']
     AImage: typeof import('ant-design-vue/es')['Image']
-    AInput: typeof import('ant-design-vue/es')['Input']
     AInputSearch: typeof import('ant-design-vue/es')['InputSearch']
     ALayout: typeof import('ant-design-vue/es')['Layout']
     ALayoutContent: typeof import('ant-design-vue/es')['LayoutContent']
@@ -25,11 +25,11 @@ declare module '@vue/runtime-core' {
     AMenuItem: typeof import('ant-design-vue/es')['MenuItem']
     ASkeleton: typeof import('ant-design-vue/es')['Skeleton']
     Category: typeof import('./src/components/Category.vue')['default']
+    Detail: typeof import('./src/components/Detail.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     Preview: typeof import('./src/components/Preview.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Search: typeof import('./src/components/Search.vue')['default']
-    Serach: typeof import('./src/components/Serach.vue')['default']
   }
 }
