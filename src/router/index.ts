@@ -8,7 +8,7 @@ import {
   createWebHistory,
 } from "vue-router"
 
-const routes: [RouteRecordRaw] = [
+const routes: RouteRecordRaw[] = [
   {
     path: "/",
     name: "Index",
@@ -34,6 +34,16 @@ const routes: [RouteRecordRaw] = [
         },
       },
     ],
+  },
+  {
+    path: "/:path(.*)",
+    name: "404",
+    component: () => import("@/components/404.vue"),
+  },
+  {
+    path: "/good/:id",
+    name: "goodDetail",
+    component: () => import("@/components/goodDetail.vue"),
   },
 ]
 

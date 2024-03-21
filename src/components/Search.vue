@@ -32,9 +32,9 @@
     </a-list>
   </div>
 </template>
-  
+
 <script setup lang='ts'>
-// import { GoodInfo } from '@/model/CategoryModel';
+
 import { useLocalStorage } from '@vueuse/core'
 import { get } from '@/service/request'
 import type { SearchGoodsList } from '@/model/Search'
@@ -67,7 +67,7 @@ const onSearch = async () => {
   }
 }
 </script>
-  
+
 <style scoped lang="scss">
 .container1 {
   padding: 32px;

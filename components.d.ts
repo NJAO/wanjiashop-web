@@ -9,6 +9,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    404: typeof import('./src/components/404.vue')['default']
     AButton: typeof import('ant-design-vue/es')['Button']
     ACard: typeof import('ant-design-vue/es')['Card']
     ACardMeta: typeof import('ant-design-vue/es')['CardMeta']
@@ -26,6 +27,7 @@ declare module '@vue/runtime-core' {
     ASkeleton: typeof import('ant-design-vue/es')['Skeleton']
     Category: typeof import('./src/components/Category.vue')['default']
     Detail: typeof import('./src/components/Detail.vue')['default']
+    GoodDetail: typeof import('./src/components/goodDetail.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     Preview: typeof import('./src/components/Preview.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
