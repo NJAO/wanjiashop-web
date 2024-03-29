@@ -1,7 +1,8 @@
 <template>
-  <div>
-    goodDetail
+  <div class="container">
+    <a-image root-class-name="image" max-width: :src="goodInfo.info.list_pic_url"></a-image>
   </div>
+
 </template>
 
 <script lang="ts" setup>
@@ -63,4 +64,16 @@ const getGoodInfo = async () => {
 }
 </script>
 
-<style></style>
+<style scoped>
+.container {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+
+  .image {
+    width: 100%;
+    max-width: 350px;
+  }
+
+}
+</style>

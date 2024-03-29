@@ -13,7 +13,7 @@
           <router-view />
         </Suspense>
       </a-layout-content>
-      <a-layout-footer :style="{ textAlign: 'center' }">
+      <a-layout-footer class="footer">
         ©2023 Created by WanjiaShop
       </a-layout-footer>
     </a-layout>
@@ -31,10 +31,11 @@ const selectedKeys = ref<string[]>([String(router.currentRoute.value.meta.key) a
 <style scoped lang="scss">
 .container {
   min-height: 100vh;
+  align-items: end;
 
-  .content {
-    // min-height: calc(100vh - 69px);
+  .footer {
+    width: calc(100% - 100px);
+    text-align: center;
   }
-
 }
 </style>
